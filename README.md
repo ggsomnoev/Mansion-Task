@@ -1,5 +1,7 @@
 ##############################################################################
+
 "# Mansion-Task"
+
 ##############################################################################
 1) Please write a class structure (in the language of your choosing, such as: C#, JAVA, JavaScript, PHP) that describes the following objects and their properties/functions.
 ·	Dolphin
