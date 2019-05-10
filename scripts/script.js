@@ -164,3 +164,4 @@ $("#playNow").click(() => {
 $("#promotions").click(() => {
     window.location.href ="http://www.casino.com/promotions/";
 })
+
