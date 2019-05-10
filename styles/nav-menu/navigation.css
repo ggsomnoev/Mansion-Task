@@ -1,0 +1,82 @@
+nav {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: 1fr auto;
+      grid-template-columns: 1fr auto;
+  -ms-grid-rows: 60px;
+      grid-template-rows: 60px;
+  background-color: #00487C;
+}
+
+nav .brand {
+  max-width: 260px;
+  height: 40px;
+  background-image: url("../../assets/casino.com_card.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+nav .nav-menu-wrapper {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav .nav-menu-wrapper .gabling_commision {
+  display: none;
+}
+
+nav .nav-menu-wrapper .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F79720), to(#DD7E29));
+  background: linear-gradient(to bottom, #F79720, #DD7E29);
+  border: 1px solid #ff8d01;
+}
+
+nav .nav-menu-wrapper .login i {
+  padding: 0 5px;
+  font-size: 1.8em;
+  color: #fff;
+}
+
+nav .nav-menu-wrapper .login p {
+  display: none;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    -ms-grid-columns: 1fr 0.5fr;
+        grid-template-columns: 1fr 0.5fr;
+    -ms-grid-rows: 50px;
+        grid-template-rows: 50px;
+  }
+  nav .nav-menu-wrapper .gabling_commision {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  nav .nav-menu-wrapper .login p {
+    display: inline-block;
+  }
+}
+/*# sourceMappingURL=navigation.css.map */

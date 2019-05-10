@@ -12,58 +12,38 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.gabling_commision div:first-of-type {
+    text-transform: uppercase;
+}
+
+.gabling_commision {
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: #fff;
+
+    div {
+        display: flex;
+        align-items: center;
+        flex-flow: row;
+        font-size: 0.7rem;
+
+        img {
+            height: 25px;
+        }
+
+        i {
+            font-size: 1.5em;
+            margin: 0 15px;
+        }
+    }
+}
+
 .container {
     background-image: url("../assets/flinstones-bgTwo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 70% 50%;
-
-    nav {
-        display: grid;
-        align-items: center;
-        grid-template-columns: 1fr auto;
-        grid-template-rows: 60px;
-        background-color: $darkblue;
-
-        .brand {
-            max-width: 260px;
-            height: 40px;
-            background-image: url("../assets/casino.com_card.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .nav-menu-wrapper {
-            height: 100%;
-            display: flex;
-            justify-content: flex-end;
-
-            .gabling_commision {
-                display: none;
-            }
-
-            .login {
-                display: flex;
-                align-items: center;
-                padding: 0 10px;
-                background: linear-gradient(to bottom, #F79720, #DD7E29);
-
-                i {
-                    padding: 0 5px;
-                    font-size: 2em;
-                    color: #fff;
-                }
-
-                p {
-                    display: none;
-                    font-weight: bold;
-                }
-
-                border: 1px solid rgb(255, 141, 1);
-            }
-        }
-    }
 
     .main-content {
         .offer {
@@ -115,34 +95,6 @@ body {
             max-width: 300px;
 
             display: none;
-        }
-    }
-
-
-    .gabling_commision div:first-of-type {
-        text-transform: uppercase;
-    }
-
-    .gabling_commision {
-        padding: 10px 20px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        color: #fff;
-
-        div {
-            display: flex;
-            align-items: center;
-            flex-flow: row;
-            font-size: 0.7rem;
-
-            img {
-                height: 25px;
-            }
-
-            i {
-                font-size: 1.5em;
-                margin: 0 15px;
-            }
         }
     }
 
@@ -254,19 +206,6 @@ footer {
             box-shadow: none;
         }
 
-        nav {
-            grid-template-columns: 1fr 0.5fr;
-            grid-template-rows: 50px;
-
-            .nav-menu-wrapper {
-                .gabling_commision {
-                    display: flex;
-                    margin: 0;
-                    padding: 0 20px;
-                }
-            }
-        }
-
         .main-content {
             margin: auto;
             display: grid;
@@ -331,15 +270,6 @@ footer {
 //Desktop
 @media screen and (min-width: 1025px) {
     .container {
-        nav {
-            .nav-menu-wrapper {
-                .login {
-                    p {
-                        display: inline-block;
-                    }
-                }
-            }
-        }
 
         .main-content {
             .offer {
@@ -356,16 +286,16 @@ footer {
         }
     }
 
+    footer .sponsors-container {
+        margin: auto;
+        max-width: 900px;
+    }
+    
     .main-content,
     .sponsors-container,
     .terms-container,
     footer p {
         margin: auto;
         max-width: 1200px;
-    }
-
-    .sponsors-container {
-        margin: auto;
-        max-width: 900px;
     }
 }
