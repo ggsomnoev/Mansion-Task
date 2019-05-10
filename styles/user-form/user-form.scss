@@ -7,12 +7,6 @@ $lighterblack: #6C6B6B;
     box-sizing: border-box;
 }
 
-body {
-    height: 100vh;
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(#000, #ff8) no-repeat;
-}
-
 .animate-out {
     animation: out 1s ease-in-out forwards;
 }
