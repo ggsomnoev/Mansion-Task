@@ -1,0 +1,403 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  background-image: url("/assets/flinstones-bgTwo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 70% 50%;
+}
+
+.container nav {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: 1fr auto;
+      grid-template-columns: 1fr auto;
+  -ms-grid-rows: 60px;
+      grid-template-rows: 60px;
+  background-color: #00487C;
+}
+
+.container nav .brand {
+  max-width: 260px;
+  height: 40px;
+  background-image: url("/assets/casino.com_card.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container nav .nav-menu-wrapper {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.container nav .nav-menu-wrapper .gabling_commision {
+  display: none;
+}
+
+.container nav .nav-menu-wrapper .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F79720), to(#DD7E29));
+  background: linear-gradient(to bottom, #F79720, #DD7E29);
+  border: 1px solid #ff8d01;
+}
+
+.container nav .nav-menu-wrapper .login i {
+  padding: 0 5px;
+  font-size: 2em;
+  color: #fff;
+}
+
+.container nav .nav-menu-wrapper .login p {
+  display: none;
+  font-weight: bold;
+}
+
+.container .main-content .offer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  text-align: center;
+}
+
+.container .main-content .offer .offer-banner {
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 72, 124, 0.8);
+          box-shadow: inset 0 0 0 1000px rgba(0, 72, 124, 0.8);
+  width: 80%;
+  padding: 20px 40px;
+  margin: 10px 0;
+  font-size: 1.3em;
+}
+
+.container .main-content .offer .offer-message h1 {
+  font-size: 3.7rem;
+}
+
+.container .main-content .offer .offer-message h1 span {
+  display: inline-block;
+  font-size: 1.5rem;
+  height: 100%;
+  width: 10%;
+}
+
+.container .main-content .offer .offer-message h2 {
+  font-size: 2.2rem;
+}
+
+.container .main-content .offer .offer-message h3 {
+  font-size: 1.9rem;
+}
+
+.container .main-content .side-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.container .main-content img {
+  margin: 0 auto;
+  max-width: 300px;
+  display: none;
+}
+
+.container .gabling_commision div:first-of-type {
+  text-transform: uppercase;
+}
+
+.container .gabling_commision {
+  padding: 10px 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  color: #fff;
+}
+
+.container .gabling_commision div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  font-size: 0.7rem;
+}
+
+.container .gabling_commision div img {
+  height: 25px;
+}
+
+.container .gabling_commision div i {
+  font-size: 1.5em;
+  margin: 0 15px;
+}
+
+.container .legal-terms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 20px;
+  font-size: 0.8em;
+  color: #00487C;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.container .legal-terms .terms {
+  text-decoration: underline;
+}
+
+.container .mobile-wrapper {
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  padding-bottom: 1px;
+}
+
+.container .mobile-wrapper .advert-games {
+  color: #fff;
+  font-size: 0.8em;
+  padding: 0 20px;
+}
+
+.container .mobile-wrapper .advert-games .games-container {
+  margin: auto;
+  max-width: 700px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.container .mobile-wrapper .advert-games .games-container .gamebox img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container .advert-games,
+.container .legal-terms,
+.container .gabling_commision {
+  margin: auto;
+  max-width: 400px;
+}
+
+.container .mobile-wrapper,
+.container .terms-container,
+.container .gambling-container {
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background-color: #EFEFEF;
+  padding: 12px;
+}
+
+footer .sponsors-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+footer .sponsors-container .sponsors {
+  padding: 5px;
+}
+
+footer .sponsors-container .sponsors img {
+  max-height: 35px;
+  width: auto;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+footer p {
+  color: #6C6B6B;
+  text-align: center;
+  padding: 10px 35px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    background-position: 50% 50%;
+  }
+  .container .advert-games,
+  .container .legal-terms,
+  .container .gabling_commision {
+    max-width: 100%;
+  }
+  .container .mobile-wrapper,
+  .container .terms-container,
+  .container .gambling-container {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .container nav {
+    -ms-grid-columns: 1fr 0.5fr;
+        grid-template-columns: 1fr 0.5fr;
+    -ms-grid-rows: 50px;
+        grid-template-rows: 50px;
+  }
+  .container nav .nav-menu-wrapper .gabling_commision {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    padding: 0 20px;
+  }
+  .container .main-content {
+    margin: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 15px;
+  }
+  .container .main-content .offer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .container .main-content .offer .offer-banner {
+    display: none;
+  }
+  .container .main-content .side-container img {
+    display: none;
+  }
+  .container .main-content img {
+    display: inline-block;
+  }
+  .container .gabling_commision {
+    display: none;
+  }
+  .container .legal-terms {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: row-reverse;
+            flex-flow: row-reverse;
+    margin: 0 40px;
+  }
+  .container .mobile-wrapper {
+    padding-bottom: 0;
+  }
+  .container .mobile-wrapper .advert-games {
+    background-color: #fff;
+    padding: 25px 60px;
+  }
+  .container .mobile-wrapper .advert-games .games-container {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+  }
+  footer .sponsors-container {
+    padding: 0;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .container nav .nav-menu-wrapper .login p {
+    display: inline-block;
+  }
+  .container .main-content .offer .offer-banner {
+    display: inline-block;
+  }
+  .container .main-content .side-container img {
+    display: inline-block;
+  }
+  .main-content,
+  .sponsors-container,
+  .terms-container,
+  footer p {
+    margin: auto;
+    max-width: 1200px;
+  }
+  .sponsors-container {
+    margin: auto;
+    max-width: 900px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
