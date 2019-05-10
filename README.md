@@ -1,5 +1,5 @@
+##############################################################################
 "# Mansion-Task"
-
 ##############################################################################
 1) Please write a class structure (in the language of your choosing, such as: C#, JAVA, JavaScript, PHP) that describes the following objects and their properties/functions.
 ·	Dolphin
@@ -67,7 +67,6 @@ public class Lion : Animal {
     }  
 }
 
-##############################################################################
 2) Asset Loading
 1.	Describe in your own words the differences between Pre-loading and Lazy-loading.
 2.	What are the advantages and disadvantages of each approach?
