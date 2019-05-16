@@ -1,0 +1,127 @@
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+
+    .slides {
+        max-width: 1025px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(10, 1fr);
+        grid-gap: 25px;
+        margin: 25px 5px;
+        overflow: hidden;
+
+        .gamebox {
+            img {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .prev-slide,
+    .next-slide {
+        height: 150px;
+        padding: 0 25px;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-weight: bold;
+        font-size: 24px;
+        user-select: none;
+        display: none;
+    }
+}
+
+.slider-container:hover {
+
+    .prev-slide,
+    .next-slide {
+        display: flex;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.animate {
+    animation: fade 1s ease;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+//Small screen laptops & tablets
+@media only screen and (max-width: 1024px) {
+    .slider-container {
+        .slides {
+            max-width: 850px;
+        }
+    }
+}
+
+//Tablet
+@media only screen and (max-width: 768px) {
+    .slider-container {
+        .slides {
+            max-width: 670px;
+        }
+
+        .prev-slide,
+        .next-slide {
+            padding: 0 14px;
+        }
+    }
+}
+
+//Phone
+@media only screen and (max-width: 425px) {
+    .slider-container {
+        background: none;
+        .slides {
+            width: 290px;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 12px;
+            margin: 25px 0;
+
+            .gamebox {
+                img {
+                    width: 140px;
+                    height: 140px;
+                }
+            }
+        }
+    }
+
+    .slider-container:hover {
+
+        .prev-slide,
+        .next-slide {
+            opacity: 0;
+            height: 290px;
+        }
+    }
+}
+
+//Small to medium screen phones
+@media only screen and (max-width: 375px) {
+    .slider-container {
+
+        .prev-slide,
+        .next-slide {
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,134 @@
+.slider-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background-color: #fff;
+}
+
+.slider-container .slides {
+  max-width: 1025px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (1fr)[10];
+      grid-template-columns: repeat(10, 1fr);
+  grid-gap: 25px;
+  margin: 25px 5px;
+  overflow: hidden;
+}
+
+.slider-container .slides .gamebox img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slider-container .prev-slide,
+.slider-container .next-slide {
+  height: 150px;
+  padding: 0 25px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: none;
+}
+
+.slider-container:hover .prev-slide,
+.slider-container:hover .next-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.animate {
+  -webkit-animation: fade 1s ease;
+          animation: fade 1s ease;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .slider-container .slides {
+    max-width: 850px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .slider-container .slides {
+    max-width: 670px;
+  }
+  .slider-container .prev-slide,
+  .slider-container .next-slide {
+    padding: 0 14px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .slider-container {
+    background: none;
+  }
+  .slider-container .slides {
+    width: 290px;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    grid-gap: 12px;
+    margin: 25px 0;
+  }
+  .slider-container .slides .gamebox img {
+    width: 140px;
+    height: 140px;
+  }
+  .slider-container:hover .prev-slide,
+  .slider-container:hover .next-slide {
+    opacity: 0;
+    height: 290px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .slider-container .prev-slide,
+  .slider-container .next-slide {
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=slider.css.map */
