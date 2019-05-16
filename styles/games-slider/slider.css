@@ -35,6 +35,9 @@
 
 .slider-container .prev-slide,
 .slider-container .next-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 150px;
   padding: 0 25px;
   -webkit-box-pack: center;
@@ -50,14 +53,12 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  display: none;
+  visibility: hidden;
 }
 
 .slider-container:hover .prev-slide,
 .slider-container:hover .next-slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  visibility: visible;
 }
 
 .hidden {

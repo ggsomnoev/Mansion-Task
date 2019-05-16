@@ -25,6 +25,7 @@
 
     .prev-slide,
     .next-slide {
+        display: flex;
         height: 150px;
         padding: 0 25px;
         justify-content: center;
@@ -33,7 +34,7 @@
         font-weight: bold;
         font-size: 24px;
         user-select: none;
-        display: none;
+        visibility: hidden;
     }
 }
 
@@ -41,7 +42,7 @@
 
     .prev-slide,
     .next-slide {
-        display: flex;
+        visibility: visible;
     }
 }
 
