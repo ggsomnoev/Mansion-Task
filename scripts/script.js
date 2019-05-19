@@ -2,6 +2,7 @@
     //We have two user-data-containers from whom we can send data to the server.
     const userDataContainers = $(".user-data-container");
     $(userDataContainers).each((index, userDataContainer) => {
+        let isSignUpValid = false;
         const signUpForm = $(userDataContainer).find(".form-container.sign-up-form");
         //Two time validation - onsubmit and when the input field loses focus.
         const errors = {};
@@ -28,16 +29,21 @@
                 validate(inputField, errors);
                 displayErrorMessage(inputField, errors[inputField.name]);
             });
-
-            if (Object.keys(errors).length === 0) {
-                console.log("The sign up form is valid!");
-            }
+            isSignUpValid = (Object.keys(errors).length === 0) ? true : false;
+        });
+        //Select all forms inside the user-data-container and animate them on submit
+        $(userDataContainer).find(".form-container").each((index, form) => {
+            const submitBtn = $(form).find('input[type=submit]');
+            $(submitBtn).click(e => {
+                e.preventDefault();
+                //proceed only if sign up form is valid
+                if (isSignUpValid) {
+                    let nextForm = $(form).next();
+                    switchForm(form, nextForm);
+                }
+            });
         });
     });
-
-    // let currentForm = $(signUpBtn).closest(".form-container");
-    // let nextForms = $(currentForm).next();
-    // nextForm(currentForm, nextForms);
 
     function validate(field, errors) {
         const validation = {
@@ -95,7 +101,7 @@
         return ($(inputField).is(':checked'));
     }
 
-    function nextForm(currentForm, nextForm) {
+    function switchForm(currentForm, nextForm) {
         setTimeout(() => {
             $(currentForm).toggleClass('hidden');
             $(nextForm).toggleClass('hidden');
