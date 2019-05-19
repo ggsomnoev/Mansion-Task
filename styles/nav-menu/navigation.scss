@@ -1,77 +1,76 @@
 $darkblue: #00487C;
-$lighterblack: #6C6B6B;
 
-nav {
+.nav-menu {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr auto;
-    grid-template-rows: 60px;
-    background-color: $darkblue;
+    grid-template-rows: 3em;
+    background: linear-gradient(to bottom, $darkblue, rgba(0, 0, 0, .7));
+}
 
-    .brand {
-        max-width: 260px;
-        height: 40px;
-        background-image: url("../../assets/casino.com_card.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
+.nav-menu__logo {
+    max-width: 19em;
+    height: 100%;
 
-    .nav-menu-wrapper {
+    a {
+        display: block;
         height: 100%;
-        display: flex;
-        justify-content: flex-end;
-
-        .gabling_commision {
-            display: none;
-        }
-
-        .login {
-            display: flex;
-            align-items: center;
-            padding: 0 10px;
-            background: linear-gradient(to bottom, #F79720, #DD7E29);
-
-            i {
-                padding: 0 5px;
-                font-size: 1.8em;
-                color: #fff;
-            }
-
-            p {
-                display: none;
-                font-weight: bold;
-            }
-
-            border: 1px solid rgb(255, 141, 1);
-        }
+        background: url("../../assets/casino.com_card.png") no-repeat center;
+        background-size: cover;
     }
 }
+
+
+.nav-menu__links-wrapper {
+    display: flex;
+    height: 100%;
+
+    .gabling_commision {
+        display: none;
+    }
+}
+
+.nav-menu__links {
+    display: flex;
+    background: linear-gradient(to bottom, #F79720, #DD7E29);
+    border: 1px solid rgb(255, 141, 1);
+}
+
+.nav-menu__links__login {
+    display: flex;
+    align-items: center;
+    width: 3em;
+    font-weight: bold;
+    padding: 0 .5em;
+
+    .login-icon {
+        background: url("../../assets/mansion_sprite.png") -560px -599px no-repeat;
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    span {
+        display: none;
+        padding: 0 .7em;
+    }
+}
+
 
 //Tablet
 @media screen and (min-width: 768px) {
-    nav {
-        grid-template-columns: 1fr 0.5fr;
-        grid-template-rows: 50px;
-
-        .nav-menu-wrapper {
-            .gabling_commision {
-                display: flex;
-                margin: 0;
-                padding: 0 20px;
-            }
+    .nav-menu__links-wrapper {
+        .gabling_commision {
+            display: flex;
         }
     }
 }
+
 //Desktop
 @media screen and (min-width: 1025px) {
-    nav {
-        .nav-menu-wrapper {
-            .login {
-                p {
-                    display: inline-block;
-                }
-            }
+    .nav-menu__links__login {
+        width: 6.5em;
+        span {
+            display: block;
         }
     }
 }
