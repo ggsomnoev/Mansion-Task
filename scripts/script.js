@@ -1,30 +1,52 @@
-(() => {    
-    $(".form-container.sign-up-form").find(".input-field").each((key, inputField) => {
-        $(inputField).on("focusout", () => {
-            // on focusout validate the input field and the display the appropriate error message
-            validate(inputField);
-            displayErrorMessage(inputField, errors[inputField.name]);
-            console.log(errors);
+(() => {
+    //We have two user-data-containers from whom we can send data to the server.
+    const userDataContainers = $(".user-data-container");
+    $(userDataContainers).each((index, userDataContainer) => {
+        const signUpForm = $(userDataContainer).find(".form-container.sign-up-form");
+        //Two time validation - onsubmit and when the input field loses focus. We have two sign up forms to handle.
+        const errors = {};
+        //OnFocusOut Handler
+        $(signUpForm).find(".input-wrapper input").each((index, inputField) => {
+            $(inputField).on("focusout", () => {
+                //on focusout validate the input field and display the appropriate error message
+                validate(inputField, errors);
+                //console.log(errors);
+                displayErrorMessage(inputField, errors[inputField.name]);
+            });
+            $(inputField).on("focusin", () => {
+                //on focusin clear the error box
+                displayErrorMessage(inputField, '');
+            });
         });
-        $(inputField).on("focusin", () => {
-            //on focusin clear the error box
-            displayErrorMessage(inputField, '');
+        //OnSubmit Handler
+        const signUpBtn = $(signUpForm).find('input[type=submit]');
+        $(signUpBtn).click(e => {
+            e.preventDefault();
+
+            if (signUpFormValidation(signUpBtn, errors)) {
+                console.log("The sign up form is valid!");
+            }           
         });
     });
 
-    const errors = {};
-    function validate(field) {
+    // let currentForm = $(signUpBtn).closest(".form-container");
+    // let nextForms = $(currentForm).next();
+    // nextForm(currentForm, nextForms);
+
+    function validate(field, errors) {
         const validation = {
             email: (field) => { return regexValidation(field) },
             username: (field) => { return regexValidation(field) },
             password: (field) => { return regexValidation(field) },
-            repwd: () => { return repeatPasswordValidation() }
+            repwd: (field) => { return repeatPasswordValidation(field) },
+            terms: (field) => { return termsValidation(field) }
         }
         const errorMsgs = {
             email: "Invalid email format.",
             username: "Must be between 4 and 12 characters long.",
             password: "Must be between 6 and 12 characters long. Contain 1 lowercase, 1 uppercase letters and 1 number or special char.",
-            repwd: "Passwords must match and be valid."
+            repwd: "Passwords must match and be valid.",
+            terms: "You must agree with terms and services."
         }
         //Check the corresponding input field with it's correct validation function. Populate the errors object.
         if (!validation[field.name](field)) {
@@ -36,8 +58,13 @@
     }
 
     function displayErrorMessage(field, message) {
+        //TODO: I should change this selector to more adequate one!!!
         const errorBox = $(field).parent().next();
-        $(errorBox).text(message);
+        if (message) {
+            $(errorBox).text(message);
+        } else {
+            $(errorBox).text("");
+        }
     }
 
     function regexValidation(inputField) {
@@ -49,109 +76,53 @@
         return regExps[inputField.name].test(inputField.value);
     }
     //Check if both fields are equal, not empty and the password is valid
-    function repeatPasswordValidation() {
-        const password = $(".sign-up-form input[name=password]");
-        const repwd = $(".sign-up-form input[name=repwd]");
+    function repeatPasswordValidation(repwd) {
+        const password = $(repwd).closest(".sign-up-form").find("input[name=password]");
         return (
             $(password).val() === $(repwd).val() &&
             $(password).val().length > 0 &&
-            !errors.password
+            regexValidation(password[0])
         )
     }
-    //Validates the required input fields
-    // function validate(inputField, text) {
-    //     let validationBox = $(inputField).parent().next();
-    //     $(inputField).append(`<div>${text}</div>`)
-    //     //If any text is show then the field is invalid.
-    //     //requiredInputFields[$(inputField).prop('name')] = !showOrHideText(validationBox, text);
-    // }
-    //Show or hide validation text
-    // function showOrHideText(validationBox, text) {
-    //     if (text !== '') {
-    //         $(validationBox).text(text);
-    //         $(validationBox).show();
-    //         return true;
-    //     } else {
-    //         $(validationBox).text('');
-    //         $(validationBox).hide();
-    //         return false;
-    //     }
-    // }
 
+    function termsValidation(inputField) {
+        return ($(inputField).is(':checked'));
+    }
+    //Validates all sign up form fields and displays any errors
+    function signUpFormValidation(signUpBtn, errors) {
+        let signUpForm = $(signUpBtn).closest(".form-container");
+        $(signUpForm).find(".input-wrapper input").each((key, inputField) => {
+            validate(inputField, errors);
+            displayErrorMessage(inputField, errors[inputField.name]);
+        });
+        return (Object.keys(errors).length === 0);
+    }
 
-    // function inputFieldsCheck(inputField) {
-    //     let terms = $(inputField).find(".checkbox-container input[type=checkbox]");
-    //     let validationBox = $(terms).parent().next();
-    //     for (let item in requiredInputFields) {
-    //         //console.log(item +" => "+ requiredInputFields[item])  
-    //         if (!requiredInputFields[item]) {
-    //             return showOrHideText(validationBox, "All fields are required.");
-    //         }
-    //     }
-    //     return showOrHideText(validationBox, "");
-    // }
+    function nextForm(currentForm, nextForm) {
+        setTimeout(() => {
+            $(currentForm).toggleClass('hidden');
+            $(nextForm).toggleClass('hidden');
+        }, 1000)
 
-    // function termsValidation() {
-    //     let terms = $(".checkbox-container input[type=checkbox]");
-    //     let validationBox = $(terms).parent().next();
-    //     if (!$(terms).is(':checked')) {
-    //         return showOrHideText(validationBox, "You must agree with terms and services.");
-    //     } else {
-    //         return showOrHideText(validationBox, "");
-    //     }
-    // }
-
-    // let submitBtns = $('input[type=submit]');
-
-    // function signUpValidation(signUpBtn) {
-    //     let signUpForm = $(signUpBtn).closest(".form-container");
-    //     //If inputFieldsCheck or termsValidation fails return false;
-    //     if (inputFieldsCheck(signUpForm) || termsValidation(signUpForm)) return false;
-    //     return true;
-    // }
-
-    // //Event Handlers
-    // submitBtns.each((key) => {
-    //     $(submitBtns[key]).click(e => {
-    //         e.preventDefault();
-
-    //         //Do not continue if the first form is not validated correctly;
-    //         let signUpBtn = $(submitBtns).first();
-    //         if ($(signUpBtn).val() == $(submitBtns[key]).val()) {
-    //             if (!signUpValidation(signUpBtn)) return;
-    //         }
-
-    //         let currentForm = $(submitBtns[key]).closest(".form-container");
-    //         let nextForms = $(currentForm).next();
-    //         nextForm(currentForm, nextForms);
-    //     });
-
-    //     function nextForm(currentForm, nextForm) {
-    //         setTimeout(() => {
-    //             $(currentForm).toggleClass('hidden');
-    //             $(nextForm).toggleClass('hidden');
-    //         }, 1000)
-
-    //         $(currentForm).addClass('animate-out');
-    //     }
-    // });
+        $(currentForm).addClass('animate-out');
+    }
 
 
 
-    //Show\Hide bonus container
-    $("#bonus").click(() => {
-        $("#bonus").parent().next().toggleClass("hidden");
+    //Show/Hide bonus container
+    $(".bonus").click(() => {
+        $(".bonus").parent().next().toggleClass("hidden");
     })
 
     //Redirects
-    const domainLink = "http://www.casino.com";
-    $("#skip").click(() => {
+    const domainLink = "http://play.casino.com";
+    $(".skip").click(() => {
         window.open(domainLink, "_blank");
     })
-    $("#playNow").click(() => {
+    $(".playNow").click(() => {
         window.open(domainLink + "/casino-games/", "_blank");
     })
-    $("#promotions").click(() => {
+    $(".promotions").click(() => {
         window.open(domainLink + "/promotions/", "_blank");
     });
 })();
