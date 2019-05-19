@@ -54,7 +54,7 @@ $lighterblack: #6C6B6B;
             flex-flow: column;
 
             .helper-text {
-                display: none;
+                // display: none;
                 font-size: 0.5rem;
                 padding: 5px 10px;
                 color: red;
@@ -111,15 +111,15 @@ $lighterblack: #6C6B6B;
             }
         }
 
-        .checkbox-container, .bonus-code {
-            display: grid;
-            grid-template-columns: 20px auto;
-            align-items: center;
+        // .checkbox-container, .bonus-code {
+        //     display: grid;
+        //     grid-template-columns: 20px auto;
+        //     align-items: center;
 
-            p {
-                margin: 0
-            }
-        }
+        //     p {
+        //         margin: 0
+        //     }
+        // }
 
         div {
             display: flex;

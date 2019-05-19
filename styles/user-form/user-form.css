@@ -84,7 +84,6 @@
 }
 
 .user-data-container .form-container .input-wrapper .helper-text {
-  display: none;
   font-size: 0.5rem;
   padding: 5px 10px;
   color: red;
@@ -173,20 +172,6 @@
   border: 0;
   padding: 5px 0;
   height: 100%;
-}
-
-.user-data-container .form-container .checkbox-container, .user-data-container .form-container .bonus-code {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 20px auto;
-      grid-template-columns: 20px auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.user-data-container .form-container .checkbox-container p, .user-data-container .form-container .bonus-code p {
-  margin: 0;
 }
 
 .user-data-container .form-container div {

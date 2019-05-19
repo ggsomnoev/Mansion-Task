@@ -59,7 +59,7 @@
             <div class="side-container">
                 <div class="user-data-container">
                     <!-- Step 1 -->
-                    <form action="" class="form-container">
+                    <form action="" class="form-container sign-up-form">
                         <h1>Sign up</h1>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi modi fuga.
                         </p>
@@ -73,14 +73,14 @@
                         <div class="input-wrapper">
                             <div class="input-container">
                                 <i class="fa fa-user icon"></i>
-                                <input class="input-field" type="text" placeholder="User name" name="usrname">
+                                <input class="input-field" type="text" placeholder="User name" name="username">
                             </div>
                             <span class="helper-text"></span>
                         </div>
                         <div class="input-wrapper">
                             <div class="input-container">
                                 <i class="fa fa-unlock icon"></i>
-                                <input class="input-field" type="password" placeholder="Password" name="pwd">
+                                <input class="input-field" type="password" placeholder="Password" name="password">
                             </div>
                             <span class="helper-text"></span>
                         </div>
@@ -93,8 +93,10 @@
                         </div>
                         <div class="input-wrapper">
                             <div class="checkbox-container">
-                                <input type="checkbox" name="terms">
-                                <p>By checking this box, I agree to Terms & Conditions of the site.</p>
+                                <label>
+                                    <input type="checkbox" name="terms">
+                                    By checking this box, I agree to Terms & Conditions of the site.
+                                </label>
                             </div>
                             <span class="helper-text"></span>
                         </div>
@@ -112,7 +114,7 @@
                             wish, or skip and do it at a later time.</p>
                         <div>
                             <input type="submit" value="Continue Registration">
-                            <input type="button" value="Skip" id="skip">
+                            <input type="button" value="Skip" class="skip">
                         </div>
                     </form>
                     <!-- Step 3 -->
@@ -142,7 +144,7 @@
                             <input class="input-field" type="text" placeholder="Phone Number">
                         </div>
                         <div class="bonus-code">
-                            <input type="checkbox" id="bonus">
+                            <input type="checkbox" class="bonus">
                             <p>Do you have a bonus code?</p>
                         </div>
                         <div class="input-container hidden">
@@ -158,8 +160,8 @@
                         <h2>Thank you!</h2>
                         <p>You can now play with real money. Have fun, and good luck!</p>
                         <div>
-                            <input type="button" value="Play Now" id="playNow">
-                            <input type="button" value="Promotions" id="promotions">
+                            <input type="button" value="Play Now" class="playNow">
+                            <input type="button" value="Promotions" class="promotions">
                         </div>
                     </form>
                 </div>
@@ -216,7 +218,7 @@
                     </li>
                     <li class="gamebox">
                         <a href="javascript:void(0)"><img src="https://source.unsplash.com/random/200x201" alt=""></a>
-                    </li>                    
+                    </li>
                     <li class="gamebox">
                         <a href="javascript:void(0)"><img src="https://source.unsplash.com/random/200x202" alt=""></a>
                     </li>
@@ -259,7 +261,7 @@
                     <div class="input-wrapper">
                         <div class="checkbox-container">
                             <input type="checkbox" name="terms">
-                            <p>By checking this box, I agree to Terms & Conditions of the site.</p>
+                            <label for="terms">By checking this box, I agree to Terms & Conditions of the site.</label>
                         </div>
                         <span class="helper-text"></span>
                     </div>
@@ -276,7 +278,7 @@
                         wish, or skip and do it at a later time.</p>
                     <div>
                         <input type="submit" value="Continue Registration">
-                        <input type="button" value="Skip" id="skip">
+                        <input type="button" value="Skip" class="skip">
                     </div>
                 </form>
                 <!-- Step 3 -->
@@ -305,7 +307,7 @@
                         <input class="input-field" type="text" placeholder="Phone Number">
                     </div>
                     <div class="bonus-code">
-                        <input type="checkbox" id="bonus">
+                        <input type="checkbox" class="bonus">
                         <p>Do you have a bonus code?</p>
                     </div>
                     <div class="input-container hidden">
@@ -321,8 +323,8 @@
                     <h2>Thank you!</h2>
                     <p>You can now play with real money. Have fun, and good luck!</p>
                     <div>
-                        <input type="button" value="Play Now" id="playNow">
-                        <input type="button" value="Promotions" id="promotions">
+                        <input type="button" value="Play Now" class="playNow">
+                        <input type="button" value="Promotions" class="promotions">
                     </div>
                 </form>
             </div>
