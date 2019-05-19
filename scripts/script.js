@@ -23,9 +23,15 @@
         $(signUpBtn).click(e => {
             e.preventDefault();
 
-            if (signUpFormValidation(signUpBtn, errors)) {
+            //Validates all sign up form fields and displays any errors.
+            $(signUpForm).find(".input-wrapper input").each((key, inputField) => {
+                validate(inputField, errors);
+                displayErrorMessage(inputField, errors[inputField.name]);
+            });
+
+            if (Object.keys(errors).length === 0) {
                 console.log("The sign up form is valid!");
-            }           
+            }
         });
     });
 
@@ -87,15 +93,6 @@
 
     function termsValidation(inputField) {
         return ($(inputField).is(':checked'));
-    }
-    //Validates all sign up form fields and displays any errors
-    function signUpFormValidation(signUpBtn, errors) {
-        let signUpForm = $(signUpBtn).closest(".form-container");
-        $(signUpForm).find(".input-wrapper input").each((key, inputField) => {
-            validate(inputField, errors);
-            displayErrorMessage(inputField, errors[inputField.name]);
-        });
-        return (Object.keys(errors).length === 0);
     }
 
     function nextForm(currentForm, nextForm) {
