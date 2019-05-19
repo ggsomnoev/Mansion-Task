@@ -3,7 +3,7 @@
     const userDataContainers = $(".user-data-container");
     $(userDataContainers).each((index, userDataContainer) => {
         const signUpForm = $(userDataContainer).find(".form-container.sign-up-form");
-        //Two time validation - onsubmit and when the input field loses focus. We have two sign up forms to handle.
+        //Two time validation - onsubmit and when the input field loses focus.
         const errors = {};
         //OnFocusOut Handler
         $(signUpForm).find(".input-wrapper input").each((index, inputField) => {
