@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="styles/games-slider/slider.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="scripts/script.js" defer></script>
-    <script src="scripts/games-carousel.js" defer></script>
+    <script src="scripts/userForm.js" defer></script>
+    <script src="scripts/gamesCarousel.js" defer></script>
+    <script src="scripts/redirects.js" defer></script>
 </head>
 
 <body>
@@ -193,37 +194,64 @@
         </div>
         <div class="mobile-wrapper">
             <section class="slider-container">
-                <a class="prev-slide" href="javascript:void(0)">&#10094;</a>
-                <ul class="slides">
-                    <li class="gamebox">
-                        <a href="javascript:void(0)"><img src="assets/adv-games/superman-the-movie34866.jpg" alt=""></a>
+                <a class="slider-container__prev-slide" href="javascript:void(0)">&#10094;</a>
+                <ul class="slider-container__slides">
+                    <li class="game-slide__superman slider-container--gamebox">
+                        <article class="game-slide">
+                            <h3 class="game-slide__heading">Superman the movie</h3>
+                            <button class="game-slide__btn">Real play</button>
+                        </article>
                     </li>
-                    <li class="gamebox">
-                        <a href="javascript:void(0)"><img src="assets/adv-games/batman&catwoman.png" alt=""></a>
+                    <li class="game-slide__casino-charms slider-container--gamebox">                        
+                        <article class="game-slide">
+                            <h3 class="game-slide__heading">Casino charms</h3>
+                            <button class="game-slide__btn">Real play</button>
+                        </article>
                     </li>
-                    <li class="gamebox">
-                        <a href="javascript:void(0)"><img src="assets/adv-games/green-lantern-second.jpg" alt=""></a>
+                    <li class="game-slide__scatter-grains slider-container--gamebox">                        
+                        <article class="game-slide">
+                            <h3 class="game-slide__heading">Scatter brains two</h3>
+                            <button class="game-slide__btn">Real play</button>
+                        </article>
                     </li>
-                    <li class="gamebox">
-                        <a href="javascript:void(0)"><img src="assets/adv-games/batman&pp.png" alt=""></a>
+                    <li class="game-slide__double-stacks slider-container--gamebox">
+                        <article class="game-slide">
+                            <h3 class="game-slide__heading">Double stacks</h3>
+                            <button class="game-slide__btn">Real play</button>
+                        </article>
                     </li>
-                    <li class="gamebox">
-                        <a href="javascript:void(0)"><img src="assets/adv-games/age_of_gods.jpg" alt=""></a>
+                    <li class="game-slide__batman-catwoman slider-container--gamebox">
+                        <article class="game-slide">
+                            <h3 class="game-slide__heading">Batman and catwoman</h3>
+                            <button class="game-slide__btn">Real play</button>
+                        </article>
                     </li>
-                    <li class="gamebox">
-                        <a href="javascript:void(0)"><img src="assets/adv-games/batman&batgirl.png" alt=""></a>
+                    <li class="game-slide__green-lantern slider-container--gamebox">                        
+                        <article class="game-slide">
+                            <h3 class="game-slide__heading">Green lantern</h3>
+                            <button class="game-slide__btn">Real play</button>
+                        </article>
                     </li>
-                    <li class="gamebox">
-                        <a href="javascript:void(0)"><img src="https://source.unsplash.com/random/200x200" alt=""></a>
+                    <li class="game-slide__batman-pp slider-container--gamebox">                        
+                        <article class="game-slide">
+                            <h3 class="game-slide__heading">Batman and the penguin prize</h3>
+                            <button class="game-slide__btn">Real play</button>
+                        </article>
                     </li>
-                    <li class="gamebox">
-                        <a href="javascript:void(0)"><img src="https://source.unsplash.com/random/200x201" alt=""></a>
+                    <li class="game-slide__age-of-gods slider-container--gamebox">                        
+                        <article class="game-slide">
+                            <h3 class="game-slide__heading">Age of gods</h3>
+                            <button class="game-slide__btn">Real play</button>
+                        </article>
                     </li>
-                    <li class="gamebox">
-                        <a href="javascript:void(0)"><img src="https://source.unsplash.com/random/200x202" alt=""></a>
+                    <li class="game-slide__batman-batgirl slider-container--gamebox">                        
+                        <article class="game-slide">
+                            <h3 class="game-slide__heading">Batman and the batgirl</h3>
+                            <button class="game-slide__btn">Real play</button>
+                        </article>
                     </li>
                 </ul>
-                <a class="next-slide" href="javascript:void(0)">&#10095;</a>
+                <a class="slider-container__next-slide" href="javascript:void(0)">&#10095;</a>
             </section>
             <div class="user-data-container">
                 <!-- Step 1 -->

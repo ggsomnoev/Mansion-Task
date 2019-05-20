@@ -21,7 +21,9 @@ body li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10px 20px;
+  max-width: 320px;
+  margin: auto;
+  padding: .6rem 0.2rem;
   color: #fff;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -37,16 +39,16 @@ body li {
       -ms-flex-align: center;
           align-items: center;
   font-size: 0.7rem;
-  max-width: 7.5rem;
+  max-width: 7rem;
 }
 
 .user-protection__elem img {
-  height: 22px;
+  height: 1.3rem;
 }
 
 .user-protection__elem i {
-  font-size: 1.5em;
-  margin: 0 15px;
+  font-size: 1.1rem;
+  margin: 0 .9rem;
 }
 
 .user-protection__elem:first-of-type {
@@ -141,7 +143,7 @@ body li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px 20px;
+  padding: .7rem .2rem;
   font-size: 0.8em;
   color: #00487C;
   font-weight: bold;
@@ -161,7 +163,7 @@ body li {
 .container .legal-terms,
 .container .gabling_commision {
   margin: auto;
-  max-width: 400px;
+  max-width: 320px;
 }
 
 .container .mobile-wrapper,

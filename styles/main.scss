@@ -21,7 +21,9 @@ body {
 
 .user-protection {
     display: flex;
-    padding: 10px 20px;
+    max-width:320px;
+    margin: auto;
+    padding: .6rem 0.2rem;
     color: #fff;
     user-select: none;
 }
@@ -30,15 +32,15 @@ body {
     display: flex;
     align-items: center;
     font-size: 0.7rem;
-    max-width:7.5rem;
+    max-width:7rem;
 
     img {
-        height: 22px;
+        height: 1.3rem;
     }
 
     i {
-        font-size: 1.5em;
-        margin: 0 15px;
+        font-size: 1.1rem;
+        margin: 0 .9rem;
     }
 }
 
@@ -110,7 +112,7 @@ body {
         flex-flow: column;
         align-content: center;
         justify-content: space-between;
-        padding: 10px 20px;
+        padding: .7rem .2rem;
         font-size: 0.8em;
         color: $darkblue;
         font-weight: bold;
@@ -128,8 +130,8 @@ body {
 
     .legal-terms,
     .gabling_commision {
-        margin: auto;
-        max-width: 400px;
+        margin: auto;        
+        max-width: 320px;
     }
 
     .mobile-wrapper,

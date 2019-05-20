@@ -1,5 +1,5 @@
 (() => {
-    let listOfElems = $(".slides li");
+    let listOfElems = $(".slider-container--gamebox");
     let slidesToShow = listOfElems.length;
 
     let slideIndex = 1, currentSlide = 1;
@@ -17,40 +17,40 @@
             if (currentSlide > listOfElems.length) { currentSlide = 1 };
         }
         setTimeout(() => {
-            $(".slides").addClass("animate");
+            $(".slider-container__slides").addClass("animate");
         }, 1);
     }
     function hideAllSlides() {
         for (let i = 0; i < listOfElems.length; i++) {
             $(listOfElems[i]).toggleClass("hidden");
         }
-        $(".slides").removeClass("animate");
+        $(".slider-container__slides").removeClass("animate");
     }
 
 
-    $(".prev-slide").click(() => {
+    $(".slider-container__prev-slide").click(() => {
         slideIndex -= 1;
         showSlides();
         let element = $(listOfElems[slideIndex - 1]);
         $(listOfElems[slideIndex - 1]).remove();
-        $(".slides").prepend(element);
+        $(".slider-container__slides").prepend(element);
     });
 
 
-    $(".next-slide").click(() => {
+    $(".slider-container__next-slide").click(() => {
         let element = $(listOfElems[slideIndex - 1]);
         $(listOfElems[slideIndex - 1]).remove();
-        $(".slides").append(element);
+        $(".slider-container__slides").append(element);
         slideIndex += 1;
         showSlides();
     });
 
     //Mobile - not working :(
     $(".slider-container").on("swipeleft", (e) => {
-        $(".prev-slide").click();
+        $(".slider-container__prev-slide").click();
     });
     $(".slider-container").on("swiperight", (e) => {
-        $(".next-slide").click();
+        $(".slider-container__next-slide").click();
     });
 
 })()

@@ -109,23 +109,8 @@
 
         $(currentForm).addClass('animate-out');
     }
-
-
-
     //Show/Hide bonus container
     $(".bonus").click(() => {
         $(".bonus").parent().next().toggleClass("hidden");
     })
-
-    //Redirects
-    const domainLink = "http://play.casino.com";
-    $(".skip").click(() => {
-        window.open(domainLink, "_blank");
-    })
-    $(".playNow").click(() => {
-        window.open(domainLink + "/casino-games/", "_blank");
-    })
-    $(".promotions").click(() => {
-        window.open(domainLink + "/promotions/", "_blank");
-    });
 })();
