@@ -19,34 +19,32 @@ body {
     }
 }
 
-.gabling_commision div:first-of-type {
-    text-transform: uppercase;
+.user-protection {
+    display: flex;
+    padding: 10px 20px;
+    color: #fff;
+    user-select: none;
 }
 
-.gabling_commision {
-    padding: 10px 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    color: #fff;
+.user-protection__elem {
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    max-width:7.5rem;
 
-    div {
-        display: flex;
-        align-items: center;
-        flex-flow: row;
-        font-size: 0.7rem;
+    img {
+        height: 22px;
+    }
 
-        img {
-            height: 25px;
-        }
-
-        i {
-            font-size: 1.5em;
-            margin: 0 15px;
-        }
+    i {
+        font-size: 1.5em;
+        margin: 0 15px;
     }
 }
 
-
+.user-protection__elem:first-of-type {
+    text-transform: uppercase;
+}
 
 .container {
     background-image: url("../assets/flinstones-bgTwo.jpg");
@@ -217,7 +215,7 @@ footer {
             }
         }
 
-        .gabling_commision {
+        .user-protection {
             display: none;
         }
 

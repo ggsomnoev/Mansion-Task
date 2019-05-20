@@ -17,40 +17,40 @@ body li {
   list-style: none;
 }
 
-.gabling_commision div:first-of-type {
-  text-transform: uppercase;
-}
-
-.gabling_commision {
+.user-protection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 10px 20px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
   color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-.gabling_commision div {
+.user-protection__elem {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
   font-size: 0.7rem;
+  max-width: 7.5rem;
 }
 
-.gabling_commision div img {
-  height: 25px;
+.user-protection__elem img {
+  height: 22px;
 }
 
-.gabling_commision div i {
+.user-protection__elem i {
   font-size: 1.5em;
   margin: 0 15px;
+}
+
+.user-protection__elem:first-of-type {
+  text-transform: uppercase;
 }
 
 .container {
@@ -258,7 +258,7 @@ footer p {
   .container .main-content img {
     display: inline-block;
   }
-  .container .gabling_commision {
+  .container .user-protection {
     display: none;
   }
   .container .legal-terms {

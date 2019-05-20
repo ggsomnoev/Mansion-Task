@@ -1,16 +1,13 @@
-$darkblue: #00487C;
-
 .nav-menu {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: 3em;
-    background: linear-gradient(to bottom, $darkblue, rgba(0, 0, 0, .7));
+    display: flex;
+    justify-content: space-between;
+    height: 3em;
+    background: linear-gradient(to bottom, #00487C, rgba(0, 0, 0, .7));
 }
 
 .nav-menu__logo {
     max-width: 19em;
-    height: 100%;
+    width:100%;
 
     a {
         display: block;
@@ -21,27 +18,27 @@ $darkblue: #00487C;
 }
 
 
-.nav-menu__links-wrapper {
+.nav-menu__side-container {
     display: flex;
-    height: 100%;
 
-    .gabling_commision {
+    .user-protection {
         display: none;
     }
 }
 
 .nav-menu__links {
     display: flex;
-    background: linear-gradient(to bottom, #F79720, #DD7E29);
-    border: 1px solid rgb(255, 141, 1);
+    cursor: pointer;
 }
 
-.nav-menu__links__login {
+.nav-menu__login {
     display: flex;
     align-items: center;
     width: 3em;
     font-weight: bold;
     padding: 0 .5em;
+    background: linear-gradient(to bottom, #F79720, #DD7E29);
+    border: 1px solid rgb(255, 141, 1);
 
     .login-icon {
         background: url("../../assets/mansion_sprite.png") -560px -599px no-repeat;
@@ -58,8 +55,8 @@ $darkblue: #00487C;
 
 //Tablet
 @media screen and (min-width: 768px) {
-    .nav-menu__links-wrapper {
-        .gabling_commision {
+    .nav-menu__side-container  {
+        .user-protection {
             display: flex;
         }
     }
@@ -67,8 +64,8 @@ $darkblue: #00487C;
 
 //Desktop
 @media screen and (min-width: 1025px) {
-    .nav-menu__links__login {
-        width: 6.5em;
+    .nav-menu__login {
+        width: 6.6em;
         span {
             display: block;
         }
