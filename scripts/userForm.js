@@ -1,13 +1,13 @@
 (() => {
     //We have two user-data-containers from whom we can send data to the server.
-    const userDataContainers = $(".user-data-container");
+    const userDataContainers = $(".user-data__container");
+    let isSignUpValid = false;
     $(userDataContainers).each((index, userDataContainer) => {
-        let isSignUpValid = false;
-        const signUpForm = $(userDataContainer).find(".form-container.sign-up-form");
+        const signUpForm = $(userDataContainer).find(".user-data__form.sign-up-form");
         //Two time validation - onsubmit and when the input field loses focus.
         const errors = {};
         //OnFocusOut Handler
-        $(signUpForm).find(".input-wrapper input").each((index, inputField) => {
+        $(signUpForm).find(".user-data__input-wrapper input").each((index, inputField) => {
             $(inputField).on("focusout", () => {
                 //on focusout validate the input field and display the appropriate error message
                 validate(inputField, errors);
@@ -25,21 +25,21 @@
             e.preventDefault();
 
             //Validates all sign up form fields and displays any errors.
-            $(signUpForm).find(".input-wrapper input").each((key, inputField) => {
+            $(signUpForm).find(".user-data__input-wrapper input").each((key, inputField) => {
                 validate(inputField, errors);
                 displayErrorMessage(inputField, errors[inputField.name]);
             });
             isSignUpValid = (Object.keys(errors).length === 0) ? true : false;
         });
-        //Select all forms inside the user-data-container and animate them on submit
-        $(userDataContainer).find(".form-container").each((index, form) => {
-            const submitBtn = $(form).find('input[type=submit]');
-            $(submitBtn).click(e => {
+        //Select all steps containers inside the user-data-container and animate them on submit
+        $(userDataContainer).find(".user-data--step").each((index, step) => {
+            const submitBtns = $(step).find('input[type=submit]');
+            $(submitBtns).click(e => {
                 e.preventDefault();
-                //proceed only if sign up form is valid
+                //proceed only if sign up form is valid 
                 if (isSignUpValid) {
-                    let nextForm = $(form).next();
-                    switchForm(form, nextForm);
+                    const nextStepCon = $(step).next();
+                    nextStep(step, nextStepCon);
                 }
             });
         });
@@ -101,7 +101,7 @@
         return ($(inputField).is(':checked'));
     }
 
-    function switchForm(currentForm, nextForm) {
+    function nextStep(currentForm, nextForm) {
         setTimeout(() => {
             $(currentForm).toggleClass('hidden');
             $(nextForm).toggleClass('hidden');

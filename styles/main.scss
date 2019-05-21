@@ -21,7 +21,7 @@ body {
 
 .user-protection {
     display: flex;
-    max-width:320px;
+    max-width: 320px;
     margin: auto;
     padding: .6rem 0.2rem;
     color: #fff;
@@ -32,7 +32,7 @@ body {
     display: flex;
     align-items: center;
     font-size: 0.7rem;
-    max-width:7rem;
+    max-width: 7rem;
 
     img {
         height: 1.3rem;
@@ -48,182 +48,127 @@ body {
     text-transform: uppercase;
 }
 
-.container {
-    background-image: url("../assets/flinstones-bgTwo.jpg");
-    background-repeat: no-repeat;
+.casino-container {
+    background: url("../assets/flinstones-bgTwo.jpg") no-repeat 70% 50%;
     background-size: cover;
-    background-position: 70% 50%;
-
-    .main-content {
-        .offer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            color: #fff;
-            text-align: center;
-
-            .offer-banner {
-                box-shadow: inset 0 0 0 1000px rgba(0, 72, 124, .8);
-                width: 80%;
-                padding: 20px 40px;
-                margin: 10px 0;
-                font-size: 1.3em;
-            }
-
-            .offer-message {
-                h1 {
-                    font-size: 3.7rem;
-
-                    span {
-                        display: inline-block;
-                        font-size: 1.5rem;
-                        height: 100%;
-                        width: 10%;
-                    }
-                }
-
-                h2 {
-                    font-size: 2.2rem;
-                }
-
-                h3 {
-                    font-size: 1.9rem;
-                }
-            }
-        }
-
-        .side-container {
-            display: flex;
-            flex-flow: column;
-            align-content: space-around;
-        }
-
-        img {
-            margin: 0 auto;
-            max-width: 300px;
-            user-select: none;
-            display: none;
-        }
-    }
-
-    .legal-terms {
-        display: flex;
-        flex-flow: column;
-        align-content: center;
-        justify-content: space-between;
-        padding: .7rem .2rem;
-        font-size: 0.8em;
-        color: $darkblue;
-        font-weight: bold;
-        line-height: 20px;
-
-        .terms {
-            text-decoration: underline;
-        }
-    }
 
     .mobile-wrapper {
         box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
         padding-bottom: 1px;
     }
 
-    .legal-terms,
-    .gabling_commision {
-        margin: auto;        
-        max-width: 320px;
-    }
+}
 
-    .mobile-wrapper,
-    .terms-container,
-    .gambling-container {
-        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
+.casino__main-content {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.casino__offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.casino__offer-banner {
+    box-shadow: inset 0 0 0 1000px rgba(0, 72, 124, .8);
+    max-width: 320px;
+    width: 100%;
+    padding: 20px 40px;
+    margin: .5em .5em;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.casino__offer-message { 
+    cursor: pointer;   
+    .word-breaker {
+        display: inline-block;
+        font-size: 1.5rem;
+        height: 100%;
+        width: 10%;
+    }
+    .big--heading {
+        font-size: 3.7rem;
+
+    }
+    .small--heading {
+        font-size: 2.2rem;
     }
 }
 
-footer {
+.legal-terms {
+    max-width: 320px;
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+    align-content: center;
+    justify-content: space-between;
+    padding: .7rem .2rem;
+    font-size: 0.8em;
+    color: $darkblue;
+    font-weight: bold;
+    line-height: 20px;
+
+    .terms {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.casino--images {
+    margin: 0 auto;
+    max-width: 300px;
+    user-select: none;
+    display: none;
+}
+
+.casino-footer {
     background-color: #EFEFEF;
-    padding: 12px;
+    padding: 1rem;
+}
 
-    .sponsors-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        flex-wrap: wrap;
+.casino-footer__sponsors-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
 
-        padding: 0 10px;
+.casino-footer--sponsor {
+    padding: .3rem;
 
-        .sponsors {
-            padding: 5px;
-
-            img {
-                max-height: 35px;
-                width: auto;
-                filter: grayscale(100%);
-                object-fit: cover
-            }
-        }
+    img {
+        max-height: 35px;
+        width: auto;
+        filter: grayscale(100%);
+        object-fit: cover;
     }
+}
 
-    p {
-        color: $lighterblack;
-        text-align: center;
-        padding: 10px 35px;
-    }
+.casino-footer__text {
+    margin: auto;
+    padding: .7rem;
+    color: $lighterblack;
+    text-align: center;
 }
 
 //Tablet
 @media screen and (min-width: 768px) {
-    .container {
+    .casino-container {
         background-position: 50% 50%;
-        .legal-terms,
-        .gabling_commision {
-            max-width: 100%;
-        }
 
-        .mobile-wrapper,
-        .terms-container,
-        .gambling-container {
+        .mobile-wrapper {
             box-shadow: none;
-        }
-
-        .main-content {
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            justify-content: space-around;
-            align-items: center;
-
-            padding-top: 15px;
-
-            .offer {
-                display: flex;
-                justify-content: flex-start;
-
-                .offer-banner {
-                    display: none;
-                }
-            }
-
-            .side-container {
-                img {
-                    display: none;
-                }
-            }
-
-            img {
-                display: inline-block;
-            }
         }
 
         .user-protection {
             display: none;
-        }
-
-        .legal-terms {
-            flex-flow: row-reverse;
-            margin: 0 40px;
         }
 
         .mobile-wrapper {
@@ -231,42 +176,63 @@ footer {
         }
     }
 
-    footer {
-        .sponsors-container {
-            padding: 0;
-            justify-content: space-around;
-        }
+    .casino__main-content {
+        flex-flow: row;
+        justify-content: space-between;
+
+        padding-top: 15px;
+
+    }
+
+    .casino__offer {
+        display: flex;
+        justify-content: flex-start;
+
+    }
+
+    .casino__offer-banner {
+        display: none;
+    }
+
+    .fred-flinstone-img {
+        display: inline-block;
+    }
+
+    .legal-terms {
+        flex-flow: row-reverse;
+    }
+
+    .casino__main-content,
+    .legal-terms,
+    .casino-footer__text {
+        padding: .7rem 0;
+        max-width: 670px;
     }
 }
 
-//Desktop
-@media screen and (min-width: 1025px) {
-    .container {      
-        .main-content {
-            .offer {
-                .offer-banner {
-                    display: inline-block;
-                }
-            }
+//Small laptops and portrait tablets
+@media screen and (min-width: 1024px) {
 
-            .side-container {
-                img {
-                    display: inline-block;
-                }
-            }
-        }
+    .casino__main-content,
+    .legal-terms,
+    .casino-footer__sponsors-container,
+    .casino-footer__text {
+        max-width: 850px;
+    }
+}
+
+//Larger displays
+@media screen and (min-width: 1400px) {
+    .casino__offer-banner {
+        display: inline-block;
     }
 
-    footer .sponsors-container {
-        margin: auto;
-        max-width: 900px;
+    .casino--images {
+        display: inline-block;
     }
 
-    .main-content,
-    .sponsors-container,
-    .terms-container,
-    footer p {
-        margin: auto;
-        max-width: 1200px;
+    .legal-terms,
+    .casino__main-content {
+        max-width: 1025px;
     }
 }

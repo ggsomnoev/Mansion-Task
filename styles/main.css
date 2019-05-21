@@ -55,60 +55,81 @@ body li {
   text-transform: uppercase;
 }
 
-.container {
-  background-image: url("../assets/flinstones-bgTwo.jpg");
-  background-repeat: no-repeat;
+.casino-container {
+  background: url("../assets/flinstones-bgTwo.jpg") no-repeat 70% 50%;
   background-size: cover;
-  background-position: 70% 50%;
 }
 
-.container .main-content .offer {
+.casino-container .mobile-wrapper {
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  padding-bottom: 1px;
+}
+
+.casino__main-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: auto;
+}
+
+.casino__offer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #fff;
   text-align: center;
 }
 
-.container .main-content .offer .offer-banner {
+.casino__offer-banner {
   -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 72, 124, 0.8);
           box-shadow: inset 0 0 0 1000px rgba(0, 72, 124, 0.8);
-  width: 80%;
+  max-width: 320px;
+  width: 100%;
   padding: 20px 40px;
-  margin: 10px 0;
+  margin: .5em .5em;
   font-size: 1.3em;
+  cursor: pointer;
 }
 
-.container .main-content .offer .offer-message h1 {
-  font-size: 3.7rem;
+.casino__offer-message {
+  cursor: pointer;
 }
 
-.container .main-content .offer .offer-message h1 span {
+.casino__offer-message .word-breaker {
   display: inline-block;
   font-size: 1.5rem;
   height: 100%;
   width: 10%;
 }
 
-.container .main-content .offer .offer-message h2 {
+.casino__offer-message .big--heading {
+  font-size: 3.7rem;
+}
+
+.casino__offer-message .small--heading {
   font-size: 2.2rem;
 }
 
-.container .main-content .offer .offer-message h3 {
-  font-size: 1.9rem;
-}
-
-.container .main-content .side-container {
+.legal-terms {
+  max-width: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,28 +137,7 @@ body li {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
-}
-
-.container .main-content img {
   margin: 0 auto;
-  max-width: 300px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  display: none;
-}
-
-.container .legal-terms {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-pack: justify;
@@ -150,58 +150,43 @@ body li {
   line-height: 20px;
 }
 
-.container .legal-terms .terms {
+.legal-terms .terms {
   text-decoration: underline;
+  cursor: pointer;
 }
 
-.container .mobile-wrapper {
-  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-  padding-bottom: 1px;
+.casino--images {
+  margin: 0 auto;
+  max-width: 300px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: none;
 }
 
-.container .legal-terms,
-.container .gabling_commision {
-  margin: auto;
-  max-width: 320px;
-}
-
-.container .mobile-wrapper,
-.container .terms-container,
-.container .gambling-container {
-  -webkit-box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-          box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-}
-
-footer {
+.casino-footer {
   background-color: #EFEFEF;
-  padding: 12px;
+  padding: 1rem;
 }
 
-footer .sponsors-container {
+.casino-footer__sponsors-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 0 10px;
+  margin: auto;
 }
 
-footer .sponsors-container .sponsors {
-  padding: 5px;
+.casino-footer--sponsor {
+  padding: .3rem;
 }
 
-footer .sponsors-container .sponsors img {
+.casino-footer--sponsor img {
   max-height: 35px;
   width: auto;
   -webkit-filter: grayscale(100%);
@@ -210,40 +195,38 @@ footer .sponsors-container .sponsors img {
      object-fit: cover;
 }
 
-footer p {
+.casino-footer__text {
+  margin: auto;
+  padding: .7rem;
   color: #6C6B6B;
   text-align: center;
-  padding: 10px 35px;
 }
 
 @media screen and (min-width: 768px) {
-  .container {
+  .casino-container {
     background-position: 50% 50%;
   }
-  .container .legal-terms,
-  .container .gabling_commision {
-    max-width: 100%;
-  }
-  .container .mobile-wrapper,
-  .container .terms-container,
-  .container .gambling-container {
+  .casino-container .mobile-wrapper {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  .container .main-content {
-    margin: auto;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .casino-container .user-protection {
+    display: none;
+  }
+  .casino-container .mobile-wrapper {
+    padding-bottom: 0;
+  }
+  .casino__main-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-top: 15px;
   }
-  .container .main-content .offer {
+  .casino__offer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -251,52 +234,45 @@ footer p {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  .container .main-content .offer .offer-banner {
+  .casino__offer-banner {
     display: none;
   }
-  .container .main-content .side-container img {
-    display: none;
-  }
-  .container .main-content img {
+  .fred-flinstone-img {
     display: inline-block;
   }
-  .container .user-protection {
-    display: none;
-  }
-  .container .legal-terms {
+  .legal-terms {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-flow: row-reverse;
             flex-flow: row-reverse;
-    margin: 0 40px;
   }
-  .container .mobile-wrapper {
-    padding-bottom: 0;
-  }
-  footer .sponsors-container {
-    padding: 0;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+  .casino__main-content,
+  .legal-terms,
+  .casino-footer__text {
+    padding: .7rem 0;
+    max-width: 670px;
   }
 }
 
-@media screen and (min-width: 1025px) {
-  .container .main-content .offer .offer-banner {
+@media screen and (min-width: 1024px) {
+  .casino__main-content,
+  .legal-terms,
+  .casino-footer__sponsors-container,
+  .casino-footer__text {
+    max-width: 850px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .casino__offer-banner {
     display: inline-block;
   }
-  .container .main-content .side-container img {
+  .casino--images {
     display: inline-block;
   }
-  footer .sponsors-container {
-    margin: auto;
-    max-width: 900px;
-  }
-  .main-content,
-  .sponsors-container,
-  .terms-container,
-  footer p {
-    margin: auto;
-    max-width: 1200px;
+  .legal-terms,
+  .casino__main-content {
+    max-width: 1025px;
   }
 }
 /*# sourceMappingURL=main.css.map */
