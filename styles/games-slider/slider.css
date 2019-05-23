@@ -15,22 +15,26 @@
 
 .slider-container__slides {
   max-width: 1025px;
+  width: 100%;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-columns: (1fr)[10];
-      grid-template-columns: repeat(10, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (150px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 150px);
   -ms-grid-rows: 150px;
       grid-template-rows: 150px;
+  height: 150px;
   grid-gap: 25px;
   margin: 25px 5px;
   overflow: hidden;
 }
 
 .slider-container--gamebox {
-  width: 150px;
   height: 150px;
 }
 
@@ -191,10 +195,9 @@
   }
   .slider-container__slides {
     max-width: 313px;
-    -ms-grid-columns: (auto)[5];
-        grid-template-columns: repeat(5, auto);
+    height: 320px;
     grid-gap: 10px;
-    margin: 0;
+    margin: auto;
   }
   .slider-container__prev-slide,
   .slider-container__next-slide {
