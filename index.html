@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Casino.com</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/user-form/user-form.css">
+    <link rel="stylesheet" href="../styles/nav-menu/navigation.css">
+    <link rel="stylesheet" href="../styles/games-slider/slider.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <nav class="nav-menu">
+        <div class="nav-menu__logo">
+            <a href="#"></a>
+        </div>
+        <div class="nav-menu__side-container">
+            <ul class="user-protection">
+                <li class="user-protection__elem">
+                    <img src="assets/s-l640.jpg" alt="GC">
+                    <p>Gambling Commission</p>
+                </li>
+                <li class="user-protection__elem">
+                    <i class="fas fa-lock"></i>
+                    <p>Secure payments</p>
+                </li>
+                <li class="user-protection__elem">
+                    <i class="fas fa-shield-alt"></i>
+                    <p>Data Protected</p>
+                </li>
+            </ul>
+            <div class="nav-menu__links">
+                <div class="nav-menu__login">
+                    <i class="login-icon"></i>
+                    <span>Login</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="casino-container">
+        <div class="casino__main-content">
+            <main class="casino__offer">
+                <div class="casino__offer-banner">Exclusive offer / logo</div>
+                <div class="casino__offer-message">
+                    <h1 class="small--heading">Get Your</h1>
+                    <h1 class="big--heading">100%<span class="word-breaker">up to</span>£400</h1>
+                    <h1 class="small--heading">+100 Free Spins</h1>
+                </div>
+                <img class="fred-flinstone-img casino--images" src="assets/fred-flintstone-wilma.png"
+                    alt="Fred Flinstone">
+            </main>
+            <aside class="casino__side-wrapper">
+                <div class="user-data__container">
+                    <!-- Step 1 -->
+                    <div class="user-data--step">
+                        <h1 class="user-data--heading big--heading">Sign up</h1>
+                        <p class="user-data__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Necessitatibus excepturi modi fuga.
+                        </p>
+                        <form action="" class="user-data__form sign-up-form">
+                            <div class="user-data__input-wrapper">
+                                <div class="user-data__input-container">
+                                    <i class="fa fa-envelope icon"></i>
+                                    <input class="input-field" type="email" placeholder="Email" name="email">
+                                </div>
+                                <span class="user-data__helper-text"></span>
+                            </div>
+                            <div class="user-data__input-wrapper">
+                                <div class="user-data__input-container">
+                                    <i class="fa fa-user icon"></i>
+                                    <input class="input-field" type="text" placeholder="User name" name="username">
+                                </div>
+                                <span class="user-data__helper-text"></span>
+                            </div>
+                            <div class="user-data__input-wrapper">
+                                <div class="user-data__input-container">
+                                    <i class="fa fa-unlock icon"></i>
+                                    <input class="input-field" type="password" placeholder="Password" name="password">
+                                </div>
+                                <span class="user-data__helper-text"></span>
+                            </div>
+                            <div class="user-data__input-wrapper">
+                                <div class="user-data__input-container">
+                                    <i class="fa fa-unlock icon"></i>
+                                    <input class="input-field" type="password" placeholder="Confirm Password"
+                                        name="repwd">
+                                </div>
+                                <span class="user-data__helper-text"></span>
+                            </div>
+                            <div class="user-data__input-wrapper">
+                                <label class="user-data__checkbox-container">
+                                    <input type="checkbox" name="terms">
+                                    <p class="user-data__text">By checking this box, I agree to Terms & Conditions of
+                                        the site.</p>
+                                </label>
+                                <span class="user-data__helper-text"></span>
+                            </div>
+                            <div class="user-data__btn-container">
+                                <input type="submit" value="Join Now">
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="user-data--step hidden">
+                        <h1 class="user-data--heading small--heading">You’re ready to play!</h1>
+                        <p class="user-data__text">In order to play with real money, you will need to provide more
+                            information. You can do so
+                            now,
+                            if
+                            you
+                            wish, or skip and do it at a later time.</p>
+                        <div class="user-data__btn-container">
+                            <input type="submit" value="Continue Registration">
+                            <input type="button" value="Skip" class="skip">
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="user-data--step hidden">
+                        <h1 class="user-data--heading small--heading">Additional Information</h1>
+                        <p class="user-data__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Necessitatibus excepturi modi
+                            fuga.</p>
+                        <form action="" class="user-data__form">
+                            <div class="user-data__input-wrapper">
+                                <div class="user-data__input-container">
+                                    <i class="fas fa-address-book icon"></i>
+                                    <input class="input-field" type="text" placeholder="Address 1">
+                                </div>
+                            </div>
+                            <div class="user-data__input-wrapper">
+                                <div class="user-data__input-container">
+                                    <i class="fas fa-address-book icon"></i>
+                                    <input class="input-field" type="text" placeholder="Address 2">
+                                </div>
+                            </div>
+                            <div class="user-data__input-wrapper">
+                                <div class="user-data__input-container">
+                                    <i class="fas fa-building icon"></i>
+                                    <input class="input-field" type="text" placeholder="City">
+                                </div>
+                            </div>
+                            <div class="user-data__input-wrapper">
+                                <div class="user-data__input-container">
+                                    <i class="fas fa-building icon"></i>
+                                    <input class="input-field" type="text" placeholder="Postal Code">
+                                </div>
+                            </div>
+                            <div class="user-data__input-wrapper">
+                                <div class="user-data__input-container">
+                                    <i class="fas fa-phone-square icon"></i>
+                                    <input class="input-field" type="text" placeholder="Phone Number">
+                                </div>
+                            </div>
+                            <div class="user-data__input-wrapper">
+                                <label class="user-data__checkbox-container">
+                                    <input type="checkbox" class="bonus">
+                                    <p class="user-data__text">Do you have a bonus code?</p>
+                                </label>
+                                <div class="user-data__input-container hidden">
+                                    <i class="fas fa-star icon"></i>
+                                    <input class="input-field" type="text" placeholder="Bonus Code">
+                                </div>
+                            </div>
+                            <div class="user-data__btn-container">
+                                <input type="submit" value="Continue">
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="user-data--step hidden">
+                        <h1 class="user-data--heading small--heading">Thank you!</h1>
+                        <p class="user-data__text">You can now play with real money. Have fun, and good luck!</p>
+                        <div class="user-data__btn-container">
+                            <input type="button" value="Play Now" class="playNow">
+                            <input type="button" value="Promotions" class="promotions">
+                        </div>
+                    </div>
+                </div>
+                <img class="flinstone-logo casino--images" src="assets/The_Flintstones_logo.svg.png"
+                    alt="Flinstone Logo">
+            </aside>
+        </div>
+
+        <div class="mobile-wrapper">
+            <ul class="user-protection">
+                <li class="user-protection__elem">
+                    <img src="assets/s-l640.jpg" alt="">
+                    <p>Gambling Commission</p>
+                </li>
+                <li class="user-protection__elem">
+                    <i class="fas fa-lock"></i>
+                    <p>Secure payments</p>
+                </li>
+                <li class="user-protection__elem">
+                    <i class="fas fa-shield-alt"></i>
+                    <p>Data Protected</p>
+                </li>
+            </ul>
+            <div class="legal-terms">
+                <p>&copy; Legal line (s17)</p>
+                <p class="terms">+Terms and Conditions apply</p>
+            </div>
+            <section class="slider-container">
+                <a class="slider-container__prev-slide" href="javascript:void(0)">&#10094;</a>
+                <ul class="slider-container__slides">
+                    <li class="game-slide__superman slider-container--gamebox">
+                        <article class="game-slide">
+                            <h3 class="game-slide__heading">Superman the movie</h3>
+                            <button class="game-slide__btn">Real play</button>
+                        </article>
+                    </li>
+                    <li class="game-slide__casino-charms slider-container--gamebox">
+                        <article class="game-slide">
+                            <h3 class="game-slide__heading">Casino charms</h3>
+                            <button class="game-slide__btn">Real play</button>
+                        </article>
+                    </li>
+                    <li class="game-slide__scatter-grains slider-container--gamebox">
+                        <article class="game-slide">
+                            <h3 class="game-slide__heading">Scatter brains two</h3>
+                            <button class="game-slide__btn">Real play</button>
+                        </article>
+                    </li>
+                    <li class="game-slide__double-stacks slider-container--gamebox">
+                        <article class="game-slide">
+                            <h3 class="game-slide__heading">Double stacks</h3>
+                            <button class="game-slide__btn">Real play</button>
+                        </article>
+                    </li>
+                    <li class="game-slide__batman-catwoman slider-container--gamebox">
+                        <article class="game-slide">
+                            <h3 class="game-slide__heading">Batman and catwoman</h3>
+                            <button class="game-slide__btn">Real play</button>
+                        </article>
+                    </li>
+                    <li class="game-slide__green-lantern slider-container--gamebox">
+                        <article class="game-slide">
+                            <h3 class="game-slide__heading">Green lantern</h3>
+                            <button class="game-slide__btn">Real play</button>
+                        </article>
+                    </li>
+                    <li class="game-slide__batman-pp slider-container--gamebox">
+                        <article class="game-slide">
+                            <h3 class="game-slide__heading">Batman and the penguin prize</h3>
+                            <button class="game-slide__btn">Real play</button>
+                        </article>
+                    </li>
+                    <li class="game-slide__age-of-gods slider-container--gamebox">
+                        <article class="game-slide">
+                            <h3 class="game-slide__heading">Age of gods</h3>
+                            <button class="game-slide__btn">Real play</button>
+                        </article>
+                    </li>
+                    <li class="game-slide__batman-batgirl slider-container--gamebox">
+                        <article class="game-slide">
+                            <h3 class="game-slide__heading">Batman and the batgirl</h3>
+                            <button class="game-slide__btn">Real play</button>
+                        </article>
+                    </li>
+                </ul>
+                <a class="slider-container__next-slide" href="javascript:void(0)">&#10095;</a>
+            </section>
+            <div class="user-data__container">
+                <!-- Step 1 -->
+                <div class="user-data--step">
+                    <h1 class="user-data--heading big--heading">Sign up</h1>
+                    <p class="user-data__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Necessitatibus excepturi modi fuga.
+                    </p>
+                    <form action="" class="user-data__form sign-up-form">
+                        <div class="user-data__input-wrapper">
+                            <div class="user-data__input-container">
+                                <i class="fa fa-envelope icon"></i>
+                                <input class="input-field" type="email" placeholder="Email" name="email">
+                            </div>
+                            <span class="user-data__helper-text"></span>
+                        </div>
+                        <div class="user-data__input-wrapper">
+                            <div class="user-data__input-container">
+                                <i class="fa fa-user icon"></i>
+                                <input class="input-field" type="text" placeholder="User name" name="username">
+                            </div>
+                            <span class="user-data__helper-text"></span>
+                        </div>
+                        <div class="user-data__input-wrapper">
+                            <div class="user-data__input-container">
+                                <i class="fa fa-unlock icon"></i>
+                                <input class="input-field" type="password" placeholder="Password" name="password">
+                            </div>
+                            <span class="user-data__helper-text"></span>
+                        </div>
+                        <div class="user-data__input-wrapper">
+                            <div class="user-data__input-container">
+                                <i class="fa fa-unlock icon"></i>
+                                <input class="input-field" type="password" placeholder="Confirm Password" name="repwd">
+                            </div>
+                            <span class="user-data__helper-text"></span>
+                        </div>
+                        <div class="user-data__input-wrapper">
+                            <label class="user-data__checkbox-container">
+                                <input type="checkbox" name="terms">
+                                <p class="user-data__text">By checking this box, I agree to Terms & Conditions of
+                                    the site.</p>
+                            </label>
+                            <span class="user-data__helper-text"></span>
+                        </div>
+                        <div class="user-data__btn-container">
+                            <input type="submit" value="Join Now">
+                        </div>
+                    </form>
+                </div>
+                <!-- Step 2 -->
+                <div class="user-data--step hidden">
+                    <h1 class="user-data--heading small--heading">You’re ready to play!</h1>
+                    <p class="user-data__text">In order to play with real money, you will need to provide more
+                        information. You can do so
+                        now,
+                        if
+                        you
+                        wish, or skip and do it at a later time.</p>
+                    <div class="user-data__btn-container">
+                        <input type="submit" value="Continue Registration">
+                        <input type="button" value="Skip" class="skip">
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="user-data--step hidden">
+                    <h1 class="user-data--heading small--heading">Additional Information</h1>
+                    <p class="user-data__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Necessitatibus excepturi modi
+                        fuga.</p>
+                    <form action="" class="user-data__form">
+                        <div class="user-data__input-wrapper">
+                            <div class="user-data__input-container">
+                                <i class="fas fa-address-book icon"></i>
+                                <input class="input-field" type="text" placeholder="Address 1">
+                            </div>
+                        </div>
+                        <div class="user-data__input-wrapper">
+                            <div class="user-data__input-container">
+                                <i class="fas fa-address-book icon"></i>
+                                <input class="input-field" type="text" placeholder="Address 2">
+                            </div>
+                        </div>
+                        <div class="user-data__input-wrapper">
+                            <div class="user-data__input-container">
+                                <i class="fas fa-building icon"></i>
+                                <input class="input-field" type="text" placeholder="City">
+                            </div>
+                        </div>
+                        <div class="user-data__input-wrapper">
+                            <div class="user-data__input-container">
+                                <i class="fas fa-building icon"></i>
+                                <input class="input-field" type="text" placeholder="Postal Code">
+                            </div>
+                        </div>
+                        <div class="user-data__input-wrapper">
+                            <div class="user-data__input-container">
+                                <i class="fas fa-phone-square icon"></i>
+                                <input class="input-field" type="text" placeholder="Phone Number">
+                            </div>
+                        </div>
+                        <div class="user-data__input-wrapper">
+                            <label class="user-data__checkbox-container">
+                                <input type="checkbox" class="bonus">
+                                <p class="user-data__text">Do you have a bonus code?</p>
+                            </label>
+                            <div class="user-data__input-container hidden">
+                                <i class="fas fa-star icon"></i>
+                                <input class="input-field" type="text" placeholder="Bonus Code">
+                            </div>
+                        </div>
+                        <div class="user-data__btn-container">
+                            <input type="submit" value="Continue">
+                        </div>
+                    </form>
+                </div>
+                <!-- Step 4 -->
+                <div class="user-data--step hidden">
+                    <h1 class="user-data--heading small--heading">Thank you!</h1>
+                    <p class="user-data__text">You can now play with real money. Have fun, and good luck!</p>
+                    <div class="user-data__btn-container">
+                        <input type="button" value="Play Now" class="playNow">
+                        <input type="button" value="Promotions" class="promotions">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="casino-footer">
+            <div class="casino-footer__sponsors-container">
+                <div class="casino-footer--sponsor">
+                    <a href="#"><img src="assets/footer-logos/gambleaware.png" alt=""></a>
+                </div>
+                <div class="casino-footer--sponsor">
+                    <a href="#"><img src="assets/footer-logos/thawte.png" alt=""></a>
+                </div>
+                <div class="casino-footer--sponsor">
+                    <a href="#"><img src="assets/footer-logos/git-logo.png" alt=""></a>
+                </div>
+                <div class="casino-footer--sponsor">
+                    <a href="#"><img src="assets/footer-logos/GBGA.png" alt=""></a>
+                </div>
+                <div class="casino-footer--sponsor">
+                    <a href="#"><img src="/assets/footer-logos/Coat_of_arms_of_Bulgaria.svg.png" alt=""></a>
+                </div>
+                <div class="casino-footer--sponsor">
+                    <a href="#"><img src="assets/footer-logos/ibas_logo.png" alt=""></a>
+                </div>
+                <div class="casino-footer--sponsor">
+                    <a href="#"><img src="assets/footer-logos/gamcare_logo.png" alt=""></a>
+                </div>
+                <div class="casino-footer--sponsor">
+                    <a href="#"><img src="assets/footer-logos/Gambling-Commission-logo-transparent.png" alt=""></a>
+                </div>
+            </div>
+            <p class="casino-footer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nobis
+                officiis, perspiciatis quis laborum
+                odit
+                vitae maiores libero, est quos necessitatibus asperiores atque ipsam consequatur rerum pariatur tenetur.
+                Voluptatibus, molestiae!Distinctio, sequi. Aut nostrum illo voluptate illum voluptatem consectetur quas
+                necessitatibus eos, velit ipsam vel unde molestiae explicabo id nemo hic libero commodi ab excepturi
+                ipsum
+                distinctio. Ipsum, assumenda labore.</p>
+        </footer>
+</body>
+
+</html>
